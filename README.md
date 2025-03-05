@@ -111,9 +111,18 @@ The generated HTML report includes:
 ### 🤝 Contributing
 We welcome contributions! Here's how you can help:
 - Fork the repository
-- Create your feature branch (```bash git checkout -b feature/AmazingFeature ```)
-- Commit your changes ( ```bash git commit -m 'Add some AmazingFeature' ```)
-- Push to the branch (```bash git push origin feature/AmazingFeature```)
+- Create your feature branch (
+ ```bash
+      git checkout -b feature/AmazingFeature
+```
+)
+- Commit your changes (
+  ```bash
+      git commit -m 'Add some AmazingFeature'
+```
+)
+- Push to the branch (
+```bash git push origin feature/AmazingFeature```)
 - Open a Pull Request
 
 ### 📝 License
