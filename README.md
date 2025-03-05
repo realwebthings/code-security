@@ -96,33 +96,33 @@ The generated HTML report includes:
 ### 🛠️ Customization
 #### Add Custom Patterns
 ```bash
-    scanner.patterns['Custom Issue'] = r'your-regex-pattern'
+scanner.patterns['Custom Issue'] = r'your-regex-pattern'
 ```
 
 #### Exclude Additional Folders
 ```bash
-    scanner.exclude_folders.add('your-custom-folder')
+scanner.exclude_folders.add('your-custom-folder')
 ```
 
 #### Modify File Types
 ```bash
-    scanner.allowed_extensions.add('.custom-extension')
+scanner.allowed_extensions.add('.custom-extension')
 ```
 ### 🤝 Contributing
 We welcome contributions! Here's how you can help:
 - Fork the repository
 - Create your feature branch 
- ```bash
-      git checkout -b feature/AmazingFeature
-```
+    ```bash
+    git checkout -b feature/AmazingFeature
+    ```
 - Commit your changes
-  ```bash
-      git commit -m 'Add some AmazingFeature'
+    ```bash
+    git commit -m 'Add some AmazingFeature'
     ```
 - Push to the branch 
-```bash
+    ```bash
     git push origin feature/AmazingFeature
-```
+    ```
 - Open a Pull Request
 
 ### 📝 License
@@ -130,6 +130,32 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 #### 🔄 Version History
 - 1.0.0
-1. Initial Release
-2. Basic security scanning functionality
-3. HTML report generation
+    - Initial Release
+    - Basic security scanning functionality
+    - HTML report generation
+
+### 🗺️ Roadmap
+   - Add support for more programming languages
+   - Implement custom rule creation
+   - Add CI/CD integration
+   - Create a web interface
+   - Add automated fix suggestions
+   - Implement severity score calculation
+
+### ⚠️ Disclaimer
+    This tool is provided as-is without any warranties. While it helps identify potential security issues, it should not be relied upon as the sole security measure. Always perform thorough security reviews and testing.
+### 👥 Authors
+    - Mukesh Kumar
+    - GitHub: @mukesh6374 / @realwebthings
+    - LinkedIn: https://www.linkedin.com/in/mukesh11
+
+### 🌟 Support
+If you found this project helpful, please give it a star! ⭐
+For support:
+- Open an issue
+
+#### Inspired by security best practices
+
+#### Built with Python and Jinja2
+
+#### Made with ❤️ by Mukesh Kumar (Realwebthings / mukesh6374)
