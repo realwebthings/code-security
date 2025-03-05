@@ -111,18 +111,18 @@ The generated HTML report includes:
 ### 🤝 Contributing
 We welcome contributions! Here's how you can help:
 - Fork the repository
-- Create your feature branch (
+- Create your feature branch 
  ```bash
       git checkout -b feature/AmazingFeature
 ```
-)
-- Commit your changes (
+- Commit your changes
   ```bash
       git commit -m 'Add some AmazingFeature'
+    ```
+- Push to the branch 
+```bash
+    git push origin feature/AmazingFeature
 ```
-)
-- Push to the branch (
-```bash git push origin feature/AmazingFeature```)
 - Open a Pull Request
 
 ### 📝 License
@@ -130,8 +130,6 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 #### 🔄 Version History
 - 1.0.0
-```
 1. Initial Release
 2. Basic security scanning functionality
 3. HTML report generation
-```
