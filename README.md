@@ -1,33 +1,60 @@
+# Security Code Scanner
 
-To use this README:
+A Python-based security code scanner that helps identify potential security vulnerabilities in your codebase. This tool performs automated scanning to detect common security issues, hardcoded secrets, and potential vulnerabilities while generating comprehensive HTML reports with solutions.
 
-1. Replace placeholders:
-   - `yourusername` with your GitHub username
-   - `your-email@example.com` with your contact email
-   - Your name and social links
+## 🚀 Features
 
-2. Add any specific customizations or features you've implemented
+### Security Checks
+- 🔑 Hardcoded secrets and API keys
+- 🌐 Insecure protocols (HTTP)
+- 💉 SQL injection vulnerabilities
+- 🐛 Debug mode configurations
+- 🔓 Unsafe CORS settings
+- 🖥️ Hardcoded IP addresses
+- 🎟️ JWT tokens in code
 
-3. Update the license information if you're using a different license
+### Smart Scanning
+- 📂 Excludes common build directories (node_modules, .next, etc.)
+- 🖼️ Skips binary and asset files
+- ❌ Reduces false positives
+- 🎯 Intelligent pattern matching
 
-4. Add any screenshots of the HTML report (recommended)
+### Detailed Reporting
+- 📊 Severity-based classification
+- 📍 Precise file and line locations
+- 💻 Actual code snippets
+- 🛠️ Recommended solutions
+- ✅ Best practices guidance
 
-5. Update the roadmap based on your planned features
+## 📋 Prerequisites
 
-This README provides:
-- Clear installation instructions
-- Usage examples
-- Feature list
-- Customization options
-- Contributing guidelines
-- Future roadmap
-- Support information
+- Python 3.7 or higher
+- pip (Python package installer)
 
-You might also want to add:
-- Screenshots of the HTML report
-- More detailed examples
-- Specific use cases
-- Integration examples
-- Performance metrics
+## 🔧 Installation
 
-Would you like me to help you customize any specific section of the README?
+1. Clone the repository:
+    ```bash
+    git clone https://github.com/yourusername/security-code-scanner.git
+    cd security-code-scanner
+    ```
+
+2. Install required packages:
+    ```bash
+    pip install jinja2
+    ```
+
+## 💻 Usage
+
+### Basic Usage
+```bash
+python security_scanner.py
+```
+
+### Custom Directory Scan
+```bash
+   from security_scanner import SecurityScanner
+   scanner = SecurityScanner(root_dir="path/to/your/project")
+   scanner.scan_directory()
+   scanner.generate_report()
+```
