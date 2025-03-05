@@ -98,3 +98,31 @@ The generated HTML report includes:
 ```bash
     scanner.patterns['Custom Issue'] = r'your-regex-pattern'
 ```
+
+#### Exclude Additional Folders
+```bash
+    scanner.exclude_folders.add('your-custom-folder')
+```
+
+#### Modify File Types
+```bash
+    scanner.allowed_extensions.add('.custom-extension')
+```
+### 🤝 Contributing
+We welcome contributions! Here's how you can help:
+- Fork the repository
+- Create your feature branch (```bash git checkout -b feature/AmazingFeature ```)
+- Commit your changes ( ```bash git commit -m 'Add some AmazingFeature' ```)
+- Push to the branch (```bash git push origin feature/AmazingFeature```)
+- Open a Pull Request
+
+### 📝 License
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+#### 🔄 Version History
+- 1.0.0
+```
+1. Initial Release
+2. Basic security scanning functionality
+3. HTML report generation
+```
