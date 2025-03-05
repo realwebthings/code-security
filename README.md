@@ -58,3 +58,43 @@ python security_scanner.py
    scanner.scan_directory()
    scanner.generate_report()
 ```
+
+### 📄 Supported File Types
+- Python (.py)
+- JavaScript (.js, .jsx)
+- TypeScript (.ts, .tsx)
+- HTML (.html)
+- Environment files (.env)
+- Configuration files (.json, .yml, .yaml, .xml)
+- Text files (.txt)
+
+### 🚫 Excluded Directories
+The scanner automatically skips:
+- node_modules
+- .next
+- .git
+- pycache
+- venv/env
+- build/dist
+- coverage
+- public/assets/images
+- And more...
+
+### 📊 Report Format
+The generated HTML report includes:
+#### Summary Section
+- Total issues found
+- Severity distribution
+- Scan timestamp
+
+#### Detailed Findings
+- Issue type and severity
+- File location and line number
+- Problematic code snippet
+- Recommended solutions
+
+### 🛠️ Customization
+#### Add Custom Patterns
+```bash
+    scanner.patterns['Custom Issue'] = r'your-regex-pattern'
+```
