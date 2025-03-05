@@ -1,0 +1,922 @@
+
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Security Scan Report</title>
+            <style>
+                body {
+                    font-family: Arial, sans-serif;
+                    line-height: 1.6;
+                    margin: 20px;
+                    background-color: #f5f5f5;
+                }
+                .container {
+                    max-width: 1200px;
+                    margin: 0 auto;
+                    background-color: white;
+                    padding: 20px;
+                    border-radius: 8px;
+                    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+                }
+                h1, h2, h3 {
+                    color: #333;
+                }
+                .summary {
+                    margin: 20px 0;
+                    padding: 15px;
+                    background-color: #f8f9fa;
+                    border-radius: 4px;
+                }
+                .issue {
+                    margin: 10px 0;
+                    padding: 15px;
+                    border: 1px solid #ddd;
+                    border-radius: 4px;
+                }
+                .issue-HIGH {
+                    border-left: 5px solid #dc3545;
+                }
+                .issue-MEDIUM {
+                    border-left: 5px solid #ffc107;
+                }
+                .severity-tag {
+                    display: inline-block;
+                    padding: 2px 8px;
+                    border-radius: 4px;
+                    font-size: 0.8em;
+                    font-weight: bold;
+                    color: white;
+                }
+                .severity-HIGH {
+                    background-color: #dc3545;
+                }
+                .severity-MEDIUM {
+                    background-color: #ffc107;
+                    color: black;
+                }
+                .code-block {
+                    background-color: #f8f9fa;
+                    padding: 10px;
+                    border-radius: 4px;
+                    font-family: monospace;
+                    white-space: pre-wrap;
+                    margin: 10px 0;
+                    border: 1px solid #e9ecef;
+                }
+                .solution {
+                    background-color: #e7f3fe;
+                    padding: 10px;
+                    border-radius: 4px;
+                    margin-top: 10px;
+                }
+                .file-path {
+                    word-break: break-all;
+                    color: #0066cc;
+                    font-family: monospace;
+                }
+                .stats {
+                    display: grid;
+                    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+                    gap: 10px;
+                    margin: 20px 0;
+                }
+                .stat-box {
+                    background-color: #fff;
+                    padding: 15px;
+                    border-radius: 4px;
+                    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+                    text-align: center;
+                }
+            </style>
+        </head>
+        <body>
+            <div class="container">
+                <h1>Security Scan Report</h1>
+                <p>Generated on: 2025-03-05 12:21:36</p>
+                
+                <div class="summary">
+                    <h2>Summary</h2>
+                    <div class="stats">
+                        <div class="stat-box">
+                            <h3>Total Issues</h3>
+                            <p>40</p>
+                        </div>
+                        <div class="stat-box">
+                            <h3>High Severity</h3>
+                            <p>1</p>
+                        </div>
+                        <div class="stat-box">
+                            <h3>Medium Severity</h3>
+                            <p>39</p>
+                        </div>
+                    </div>
+                </div>
+
+                <h2>Security Issues</h2>
+                
+                    <div class="issue issue-HIGH">
+                        <h3>
+                            Hardcoded Secret
+                            <span class="severity-tag severity-HIGH">HIGH</span>
+                        </h3>
+                        <p><strong>File:</strong> <span class="file-path">./utils/constants/index.js</span></p>
+                        <p><strong>Line:</strong> 6</p>
+                        <div class="code-block">export const CONTENTFUL_ACCESS_TOKEN = "_-07qeSFD8UrvJJ-r3SrKabephzsYxPjNgvKxxCKWA4";</div>
+                        <div class="solution">
+                            <strong>Solution:</strong>
+                            
+                                <ul>
+                                    <li>Use environment variables for sensitive data</li>
+                                    <li>Implement secure secret management</li>
+                                    <li>Never commit secrets to version control</li>
+                                </ul>
+                            
+                        </div>
+                    </div>
+                
+                    <div class="issue issue-MEDIUM">
+                        <h3>
+                            Insecure Protocol
+                            <span class="severity-tag severity-MEDIUM">MEDIUM</span>
+                        </h3>
+                        <p><strong>File:</strong> <span class="file-path">./shared/components/SVGIcons/index.js</span></p>
+                        <p><strong>Line:</strong> 24</p>
+                        <div class="code-block">xmlns="http://www.w3.org/2000/svg"</div>
+                        <div class="solution">
+                            <strong>Solution:</strong>
+                            
+                                <ul>
+                                    <li>Replace HTTP with HTTPS</li>
+                                    <li>Implement SSL/TLS</li>
+                                    <li>Use secure communication protocols</li>
+                                </ul>
+                            
+                        </div>
+                    </div>
+                
+                    <div class="issue issue-MEDIUM">
+                        <h3>
+                            Insecure Protocol
+                            <span class="severity-tag severity-MEDIUM">MEDIUM</span>
+                        </h3>
+                        <p><strong>File:</strong> <span class="file-path">./shared/components/SVGIcons/index.js</span></p>
+                        <p><strong>Line:</strong> 39</p>
+                        <div class="code-block">xmlns="http://www.w3.org/2000/svg"</div>
+                        <div class="solution">
+                            <strong>Solution:</strong>
+                            
+                                <ul>
+                                    <li>Replace HTTP with HTTPS</li>
+                                    <li>Implement SSL/TLS</li>
+                                    <li>Use secure communication protocols</li>
+                                </ul>
+                            
+                        </div>
+                    </div>
+                
+                    <div class="issue issue-MEDIUM">
+                        <h3>
+                            Insecure Protocol
+                            <span class="severity-tag severity-MEDIUM">MEDIUM</span>
+                        </h3>
+                        <p><strong>File:</strong> <span class="file-path">./shared/components/SVGIcons/index.js</span></p>
+                        <p><strong>Line:</strong> 87</p>
+                        <div class="code-block">xmlns="http://www.w3.org/2000/svg"</div>
+                        <div class="solution">
+                            <strong>Solution:</strong>
+                            
+                                <ul>
+                                    <li>Replace HTTP with HTTPS</li>
+                                    <li>Implement SSL/TLS</li>
+                                    <li>Use secure communication protocols</li>
+                                </ul>
+                            
+                        </div>
+                    </div>
+                
+                    <div class="issue issue-MEDIUM">
+                        <h3>
+                            Insecure Protocol
+                            <span class="severity-tag severity-MEDIUM">MEDIUM</span>
+                        </h3>
+                        <p><strong>File:</strong> <span class="file-path">./shared/components/SVGIcons/index.js</span></p>
+                        <p><strong>Line:</strong> 151</p>
+                        <div class="code-block">xmlns="http://www.w3.org/2000/svg"</div>
+                        <div class="solution">
+                            <strong>Solution:</strong>
+                            
+                                <ul>
+                                    <li>Replace HTTP with HTTPS</li>
+                                    <li>Implement SSL/TLS</li>
+                                    <li>Use secure communication protocols</li>
+                                </ul>
+                            
+                        </div>
+                    </div>
+                
+                    <div class="issue issue-MEDIUM">
+                        <h3>
+                            Insecure Protocol
+                            <span class="severity-tag severity-MEDIUM">MEDIUM</span>
+                        </h3>
+                        <p><strong>File:</strong> <span class="file-path">./shared/components/SVGIcons/index.js</span></p>
+                        <p><strong>Line:</strong> 197</p>
+                        <div class="code-block">xmlns="http://www.w3.org/2000/svg"</div>
+                        <div class="solution">
+                            <strong>Solution:</strong>
+                            
+                                <ul>
+                                    <li>Replace HTTP with HTTPS</li>
+                                    <li>Implement SSL/TLS</li>
+                                    <li>Use secure communication protocols</li>
+                                </ul>
+                            
+                        </div>
+                    </div>
+                
+                    <div class="issue issue-MEDIUM">
+                        <h3>
+                            Insecure Protocol
+                            <span class="severity-tag severity-MEDIUM">MEDIUM</span>
+                        </h3>
+                        <p><strong>File:</strong> <span class="file-path">./shared/components/SVGIcons/index.js</span></p>
+                        <p><strong>Line:</strong> 223</p>
+                        <div class="code-block">xmlns="http://www.w3.org/2000/svg"</div>
+                        <div class="solution">
+                            <strong>Solution:</strong>
+                            
+                                <ul>
+                                    <li>Replace HTTP with HTTPS</li>
+                                    <li>Implement SSL/TLS</li>
+                                    <li>Use secure communication protocols</li>
+                                </ul>
+                            
+                        </div>
+                    </div>
+                
+                    <div class="issue issue-MEDIUM">
+                        <h3>
+                            Insecure Protocol
+                            <span class="severity-tag severity-MEDIUM">MEDIUM</span>
+                        </h3>
+                        <p><strong>File:</strong> <span class="file-path">./shared/components/SVGIcons/index.js</span></p>
+                        <p><strong>Line:</strong> 252</p>
+                        <div class="code-block">xmlns="http://www.w3.org/2000/svg"</div>
+                        <div class="solution">
+                            <strong>Solution:</strong>
+                            
+                                <ul>
+                                    <li>Replace HTTP with HTTPS</li>
+                                    <li>Implement SSL/TLS</li>
+                                    <li>Use secure communication protocols</li>
+                                </ul>
+                            
+                        </div>
+                    </div>
+                
+                    <div class="issue issue-MEDIUM">
+                        <h3>
+                            Insecure Protocol
+                            <span class="severity-tag severity-MEDIUM">MEDIUM</span>
+                        </h3>
+                        <p><strong>File:</strong> <span class="file-path">./shared/components/SVGIcons/index.js</span></p>
+                        <p><strong>Line:</strong> 277</p>
+                        <div class="code-block">xmlns="http://www.w3.org/2000/svg"</div>
+                        <div class="solution">
+                            <strong>Solution:</strong>
+                            
+                                <ul>
+                                    <li>Replace HTTP with HTTPS</li>
+                                    <li>Implement SSL/TLS</li>
+                                    <li>Use secure communication protocols</li>
+                                </ul>
+                            
+                        </div>
+                    </div>
+                
+                    <div class="issue issue-MEDIUM">
+                        <h3>
+                            Insecure Protocol
+                            <span class="severity-tag severity-MEDIUM">MEDIUM</span>
+                        </h3>
+                        <p><strong>File:</strong> <span class="file-path">./shared/components/SVGIcons/index.js</span></p>
+                        <p><strong>Line:</strong> 309</p>
+                        <div class="code-block">xmlns="http://www.w3.org/2000/svg"</div>
+                        <div class="solution">
+                            <strong>Solution:</strong>
+                            
+                                <ul>
+                                    <li>Replace HTTP with HTTPS</li>
+                                    <li>Implement SSL/TLS</li>
+                                    <li>Use secure communication protocols</li>
+                                </ul>
+                            
+                        </div>
+                    </div>
+                
+                    <div class="issue issue-MEDIUM">
+                        <h3>
+                            Insecure Protocol
+                            <span class="severity-tag severity-MEDIUM">MEDIUM</span>
+                        </h3>
+                        <p><strong>File:</strong> <span class="file-path">./shared/components/SVGIcons/index.js</span></p>
+                        <p><strong>Line:</strong> 356</p>
+                        <div class="code-block">xmlns="http://www.w3.org/2000/svg"</div>
+                        <div class="solution">
+                            <strong>Solution:</strong>
+                            
+                                <ul>
+                                    <li>Replace HTTP with HTTPS</li>
+                                    <li>Implement SSL/TLS</li>
+                                    <li>Use secure communication protocols</li>
+                                </ul>
+                            
+                        </div>
+                    </div>
+                
+                    <div class="issue issue-MEDIUM">
+                        <h3>
+                            Insecure Protocol
+                            <span class="severity-tag severity-MEDIUM">MEDIUM</span>
+                        </h3>
+                        <p><strong>File:</strong> <span class="file-path">./shared/components/SVGIcons/index.js</span></p>
+                        <p><strong>Line:</strong> 391</p>
+                        <div class="code-block">xmlns="http://www.w3.org/2000/svg"</div>
+                        <div class="solution">
+                            <strong>Solution:</strong>
+                            
+                                <ul>
+                                    <li>Replace HTTP with HTTPS</li>
+                                    <li>Implement SSL/TLS</li>
+                                    <li>Use secure communication protocols</li>
+                                </ul>
+                            
+                        </div>
+                    </div>
+                
+                    <div class="issue issue-MEDIUM">
+                        <h3>
+                            Insecure Protocol
+                            <span class="severity-tag severity-MEDIUM">MEDIUM</span>
+                        </h3>
+                        <p><strong>File:</strong> <span class="file-path">./shared/components/SVGIcons/index.js</span></p>
+                        <p><strong>Line:</strong> 495</p>
+                        <div class="code-block">xmlns="http://www.w3.org/2000/svg"</div>
+                        <div class="solution">
+                            <strong>Solution:</strong>
+                            
+                                <ul>
+                                    <li>Replace HTTP with HTTPS</li>
+                                    <li>Implement SSL/TLS</li>
+                                    <li>Use secure communication protocols</li>
+                                </ul>
+                            
+                        </div>
+                    </div>
+                
+                    <div class="issue issue-MEDIUM">
+                        <h3>
+                            Insecure Protocol
+                            <span class="severity-tag severity-MEDIUM">MEDIUM</span>
+                        </h3>
+                        <p><strong>File:</strong> <span class="file-path">./shared/components/SVGIcons/index.js</span></p>
+                        <p><strong>Line:</strong> 515</p>
+                        <div class="code-block">xmlns="http://www.w3.org/2000/svg"</div>
+                        <div class="solution">
+                            <strong>Solution:</strong>
+                            
+                                <ul>
+                                    <li>Replace HTTP with HTTPS</li>
+                                    <li>Implement SSL/TLS</li>
+                                    <li>Use secure communication protocols</li>
+                                </ul>
+                            
+                        </div>
+                    </div>
+                
+                    <div class="issue issue-MEDIUM">
+                        <h3>
+                            Insecure Protocol
+                            <span class="severity-tag severity-MEDIUM">MEDIUM</span>
+                        </h3>
+                        <p><strong>File:</strong> <span class="file-path">./shared/components/SVGIcons/index.js</span></p>
+                        <p><strong>Line:</strong> 559</p>
+                        <div class="code-block">xmlns="http://www.w3.org/2000/svg"</div>
+                        <div class="solution">
+                            <strong>Solution:</strong>
+                            
+                                <ul>
+                                    <li>Replace HTTP with HTTPS</li>
+                                    <li>Implement SSL/TLS</li>
+                                    <li>Use secure communication protocols</li>
+                                </ul>
+                            
+                        </div>
+                    </div>
+                
+                    <div class="issue issue-MEDIUM">
+                        <h3>
+                            Insecure Protocol
+                            <span class="severity-tag severity-MEDIUM">MEDIUM</span>
+                        </h3>
+                        <p><strong>File:</strong> <span class="file-path">./shared/components/SVGIcons/index.js</span></p>
+                        <p><strong>Line:</strong> 587</p>
+                        <div class="code-block">xmlns="http://www.w3.org/2000/svg"</div>
+                        <div class="solution">
+                            <strong>Solution:</strong>
+                            
+                                <ul>
+                                    <li>Replace HTTP with HTTPS</li>
+                                    <li>Implement SSL/TLS</li>
+                                    <li>Use secure communication protocols</li>
+                                </ul>
+                            
+                        </div>
+                    </div>
+                
+                    <div class="issue issue-MEDIUM">
+                        <h3>
+                            Insecure Protocol
+                            <span class="severity-tag severity-MEDIUM">MEDIUM</span>
+                        </h3>
+                        <p><strong>File:</strong> <span class="file-path">./shared/components/SVGIcons/index.js</span></p>
+                        <p><strong>Line:</strong> 659</p>
+                        <div class="code-block">xmlns="http://www.w3.org/2000/svg"</div>
+                        <div class="solution">
+                            <strong>Solution:</strong>
+                            
+                                <ul>
+                                    <li>Replace HTTP with HTTPS</li>
+                                    <li>Implement SSL/TLS</li>
+                                    <li>Use secure communication protocols</li>
+                                </ul>
+                            
+                        </div>
+                    </div>
+                
+                    <div class="issue issue-MEDIUM">
+                        <h3>
+                            Insecure Protocol
+                            <span class="severity-tag severity-MEDIUM">MEDIUM</span>
+                        </h3>
+                        <p><strong>File:</strong> <span class="file-path">./shared/components/SVGIcons/index.js</span></p>
+                        <p><strong>Line:</strong> 697</p>
+                        <div class="code-block">xmlns="http://www.w3.org/2000/svg"</div>
+                        <div class="solution">
+                            <strong>Solution:</strong>
+                            
+                                <ul>
+                                    <li>Replace HTTP with HTTPS</li>
+                                    <li>Implement SSL/TLS</li>
+                                    <li>Use secure communication protocols</li>
+                                </ul>
+                            
+                        </div>
+                    </div>
+                
+                    <div class="issue issue-MEDIUM">
+                        <h3>
+                            Insecure Protocol
+                            <span class="severity-tag severity-MEDIUM">MEDIUM</span>
+                        </h3>
+                        <p><strong>File:</strong> <span class="file-path">./shared/components/SVGIcons/index.js</span></p>
+                        <p><strong>Line:</strong> 734</p>
+                        <div class="code-block">xmlns="http://www.w3.org/2000/svg"</div>
+                        <div class="solution">
+                            <strong>Solution:</strong>
+                            
+                                <ul>
+                                    <li>Replace HTTP with HTTPS</li>
+                                    <li>Implement SSL/TLS</li>
+                                    <li>Use secure communication protocols</li>
+                                </ul>
+                            
+                        </div>
+                    </div>
+                
+                    <div class="issue issue-MEDIUM">
+                        <h3>
+                            Insecure Protocol
+                            <span class="severity-tag severity-MEDIUM">MEDIUM</span>
+                        </h3>
+                        <p><strong>File:</strong> <span class="file-path">./shared/components/SVGIcons/index.js</span></p>
+                        <p><strong>Line:</strong> 756</p>
+                        <div class="code-block">xmlns="http://www.w3.org/2000/svg"</div>
+                        <div class="solution">
+                            <strong>Solution:</strong>
+                            
+                                <ul>
+                                    <li>Replace HTTP with HTTPS</li>
+                                    <li>Implement SSL/TLS</li>
+                                    <li>Use secure communication protocols</li>
+                                </ul>
+                            
+                        </div>
+                    </div>
+                
+                    <div class="issue issue-MEDIUM">
+                        <h3>
+                            Insecure Protocol
+                            <span class="severity-tag severity-MEDIUM">MEDIUM</span>
+                        </h3>
+                        <p><strong>File:</strong> <span class="file-path">./shared/components/SVGIcons/index.js</span></p>
+                        <p><strong>Line:</strong> 782</p>
+                        <div class="code-block">xmlns="http://www.w3.org/2000/svg"</div>
+                        <div class="solution">
+                            <strong>Solution:</strong>
+                            
+                                <ul>
+                                    <li>Replace HTTP with HTTPS</li>
+                                    <li>Implement SSL/TLS</li>
+                                    <li>Use secure communication protocols</li>
+                                </ul>
+                            
+                        </div>
+                    </div>
+                
+                    <div class="issue issue-MEDIUM">
+                        <h3>
+                            Insecure Protocol
+                            <span class="severity-tag severity-MEDIUM">MEDIUM</span>
+                        </h3>
+                        <p><strong>File:</strong> <span class="file-path">./shared/components/SVGIcons/index.js</span></p>
+                        <p><strong>Line:</strong> 807</p>
+                        <div class="code-block">xmlns="http://www.w3.org/2000/svg"</div>
+                        <div class="solution">
+                            <strong>Solution:</strong>
+                            
+                                <ul>
+                                    <li>Replace HTTP with HTTPS</li>
+                                    <li>Implement SSL/TLS</li>
+                                    <li>Use secure communication protocols</li>
+                                </ul>
+                            
+                        </div>
+                    </div>
+                
+                    <div class="issue issue-MEDIUM">
+                        <h3>
+                            Insecure Protocol
+                            <span class="severity-tag severity-MEDIUM">MEDIUM</span>
+                        </h3>
+                        <p><strong>File:</strong> <span class="file-path">./shared/components/SVGIcons/index.js</span></p>
+                        <p><strong>Line:</strong> 842</p>
+                        <div class="code-block">xmlns="http://www.w3.org/2000/svg"</div>
+                        <div class="solution">
+                            <strong>Solution:</strong>
+                            
+                                <ul>
+                                    <li>Replace HTTP with HTTPS</li>
+                                    <li>Implement SSL/TLS</li>
+                                    <li>Use secure communication protocols</li>
+                                </ul>
+                            
+                        </div>
+                    </div>
+                
+                    <div class="issue issue-MEDIUM">
+                        <h3>
+                            Insecure Protocol
+                            <span class="severity-tag severity-MEDIUM">MEDIUM</span>
+                        </h3>
+                        <p><strong>File:</strong> <span class="file-path">./shared/components/SVGIcons/index.js</span></p>
+                        <p><strong>Line:</strong> 880</p>
+                        <div class="code-block">xmlns="http://www.w3.org/2000/svg"</div>
+                        <div class="solution">
+                            <strong>Solution:</strong>
+                            
+                                <ul>
+                                    <li>Replace HTTP with HTTPS</li>
+                                    <li>Implement SSL/TLS</li>
+                                    <li>Use secure communication protocols</li>
+                                </ul>
+                            
+                        </div>
+                    </div>
+                
+                    <div class="issue issue-MEDIUM">
+                        <h3>
+                            Insecure Protocol
+                            <span class="severity-tag severity-MEDIUM">MEDIUM</span>
+                        </h3>
+                        <p><strong>File:</strong> <span class="file-path">./shared/components/SVGIcons/index.js</span></p>
+                        <p><strong>Line:</strong> 916</p>
+                        <div class="code-block">xmlns="http://www.w3.org/2000/svg"</div>
+                        <div class="solution">
+                            <strong>Solution:</strong>
+                            
+                                <ul>
+                                    <li>Replace HTTP with HTTPS</li>
+                                    <li>Implement SSL/TLS</li>
+                                    <li>Use secure communication protocols</li>
+                                </ul>
+                            
+                        </div>
+                    </div>
+                
+                    <div class="issue issue-MEDIUM">
+                        <h3>
+                            Insecure Protocol
+                            <span class="severity-tag severity-MEDIUM">MEDIUM</span>
+                        </h3>
+                        <p><strong>File:</strong> <span class="file-path">./shared/components/SVGIcons/index.js</span></p>
+                        <p><strong>Line:</strong> 936</p>
+                        <div class="code-block">xmlns="http://www.w3.org/2000/svg"</div>
+                        <div class="solution">
+                            <strong>Solution:</strong>
+                            
+                                <ul>
+                                    <li>Replace HTTP with HTTPS</li>
+                                    <li>Implement SSL/TLS</li>
+                                    <li>Use secure communication protocols</li>
+                                </ul>
+                            
+                        </div>
+                    </div>
+                
+                    <div class="issue issue-MEDIUM">
+                        <h3>
+                            Insecure Protocol
+                            <span class="severity-tag severity-MEDIUM">MEDIUM</span>
+                        </h3>
+                        <p><strong>File:</strong> <span class="file-path">./shared/components/SVGIcons/index.js</span></p>
+                        <p><strong>Line:</strong> 951</p>
+                        <div class="code-block">xmlns="http://www.w3.org/2000/svg"</div>
+                        <div class="solution">
+                            <strong>Solution:</strong>
+                            
+                                <ul>
+                                    <li>Replace HTTP with HTTPS</li>
+                                    <li>Implement SSL/TLS</li>
+                                    <li>Use secure communication protocols</li>
+                                </ul>
+                            
+                        </div>
+                    </div>
+                
+                    <div class="issue issue-MEDIUM">
+                        <h3>
+                            Insecure Protocol
+                            <span class="severity-tag severity-MEDIUM">MEDIUM</span>
+                        </h3>
+                        <p><strong>File:</strong> <span class="file-path">./shared/components/SVGIcons/index.js</span></p>
+                        <p><strong>Line:</strong> 964</p>
+                        <div class="code-block">xmlns="http://www.w3.org/2000/svg"</div>
+                        <div class="solution">
+                            <strong>Solution:</strong>
+                            
+                                <ul>
+                                    <li>Replace HTTP with HTTPS</li>
+                                    <li>Implement SSL/TLS</li>
+                                    <li>Use secure communication protocols</li>
+                                </ul>
+                            
+                        </div>
+                    </div>
+                
+                    <div class="issue issue-MEDIUM">
+                        <h3>
+                            Insecure Protocol
+                            <span class="severity-tag severity-MEDIUM">MEDIUM</span>
+                        </h3>
+                        <p><strong>File:</strong> <span class="file-path">./shared/components/SVGIcons/index.js</span></p>
+                        <p><strong>Line:</strong> 993</p>
+                        <div class="code-block">xmlns="http://www.w3.org/2000/svg"</div>
+                        <div class="solution">
+                            <strong>Solution:</strong>
+                            
+                                <ul>
+                                    <li>Replace HTTP with HTTPS</li>
+                                    <li>Implement SSL/TLS</li>
+                                    <li>Use secure communication protocols</li>
+                                </ul>
+                            
+                        </div>
+                    </div>
+                
+                    <div class="issue issue-MEDIUM">
+                        <h3>
+                            Insecure Protocol
+                            <span class="severity-tag severity-MEDIUM">MEDIUM</span>
+                        </h3>
+                        <p><strong>File:</strong> <span class="file-path">./shared/seo/HomeSeo.js</span></p>
+                        <p><strong>Line:</strong> 24</p>
+                        <div class="code-block">"@context": "http://schema.org",</div>
+                        <div class="solution">
+                            <strong>Solution:</strong>
+                            
+                                <ul>
+                                    <li>Replace HTTP with HTTPS</li>
+                                    <li>Implement SSL/TLS</li>
+                                    <li>Use secure communication protocols</li>
+                                </ul>
+                            
+                        </div>
+                    </div>
+                
+                    <div class="issue issue-MEDIUM">
+                        <h3>
+                            Insecure Protocol
+                            <span class="severity-tag severity-MEDIUM">MEDIUM</span>
+                        </h3>
+                        <p><strong>File:</strong> <span class="file-path">./shared/seo/ProductPageSeo.js</span></p>
+                        <p><strong>Line:</strong> 79</p>
+                        <div class="code-block">"@context": "http://schema.org",</div>
+                        <div class="solution">
+                            <strong>Solution:</strong>
+                            
+                                <ul>
+                                    <li>Replace HTTP with HTTPS</li>
+                                    <li>Implement SSL/TLS</li>
+                                    <li>Use secure communication protocols</li>
+                                </ul>
+                            
+                        </div>
+                    </div>
+                
+                    <div class="issue issue-MEDIUM">
+                        <h3>
+                            Insecure Protocol
+                            <span class="severity-tag severity-MEDIUM">MEDIUM</span>
+                        </h3>
+                        <p><strong>File:</strong> <span class="file-path">./shared/seo/ProductPageSeo.js</span></p>
+                        <p><strong>Line:</strong> 170</p>
+                        <div class="code-block">"@context": "http://schema.org",</div>
+                        <div class="solution">
+                            <strong>Solution:</strong>
+                            
+                                <ul>
+                                    <li>Replace HTTP with HTTPS</li>
+                                    <li>Implement SSL/TLS</li>
+                                    <li>Use secure communication protocols</li>
+                                </ul>
+                            
+                        </div>
+                    </div>
+                
+                    <div class="issue issue-MEDIUM">
+                        <h3>
+                            Insecure Protocol
+                            <span class="severity-tag severity-MEDIUM">MEDIUM</span>
+                        </h3>
+                        <p><strong>File:</strong> <span class="file-path">./shared/seo/ProductPageSeo.js</span></p>
+                        <p><strong>Line:</strong> 230</p>
+                        <div class="code-block">"@context": "http://schema.org",</div>
+                        <div class="solution">
+                            <strong>Solution:</strong>
+                            
+                                <ul>
+                                    <li>Replace HTTP with HTTPS</li>
+                                    <li>Implement SSL/TLS</li>
+                                    <li>Use secure communication protocols</li>
+                                </ul>
+                            
+                        </div>
+                    </div>
+                
+                    <div class="issue issue-MEDIUM">
+                        <h3>
+                            Insecure Protocol
+                            <span class="severity-tag severity-MEDIUM">MEDIUM</span>
+                        </h3>
+                        <p><strong>File:</strong> <span class="file-path">./modules/Product/components/SeoMeta/Meta.js</span></p>
+                        <p><strong>Line:</strong> 69</p>
+                        <div class="code-block">itemCondition: 'http://schema.org/UsedCondition',</div>
+                        <div class="solution">
+                            <strong>Solution:</strong>
+                            
+                                <ul>
+                                    <li>Replace HTTP with HTTPS</li>
+                                    <li>Implement SSL/TLS</li>
+                                    <li>Use secure communication protocols</li>
+                                </ul>
+                            
+                        </div>
+                    </div>
+                
+                    <div class="issue issue-MEDIUM">
+                        <h3>
+                            Insecure Protocol
+                            <span class="severity-tag severity-MEDIUM">MEDIUM</span>
+                        </h3>
+                        <p><strong>File:</strong> <span class="file-path">./modules/Product/components/SeoMeta/Meta.js</span></p>
+                        <p><strong>Line:</strong> 70</p>
+                        <div class="code-block">availability: 'http://schema.org/InStock',</div>
+                        <div class="solution">
+                            <strong>Solution:</strong>
+                            
+                                <ul>
+                                    <li>Replace HTTP with HTTPS</li>
+                                    <li>Implement SSL/TLS</li>
+                                    <li>Use secure communication protocols</li>
+                                </ul>
+                            
+                        </div>
+                    </div>
+                
+                    <div class="issue issue-MEDIUM">
+                        <h3>
+                            Insecure Protocol
+                            <span class="severity-tag severity-MEDIUM">MEDIUM</span>
+                        </h3>
+                        <p><strong>File:</strong> <span class="file-path">./pages/questions-2.js</span></p>
+                        <p><strong>Line:</strong> 249</p>
+                        <div class="code-block">content: <Description html={'<p>Yes, we are present offline in a few cities. You can check for your city under the&nbsp;store locator tab.&nbsp;(<a href="https://mamaearth.in/store-locator/" target="_blank" rel="noopener" data-saferedirecturl="https://www.google.com/url?hl=en&amp;q=http://mamaearth.in/store-locator/&amp;source=gmail&amp;ust=1520407581069000&amp;usg=AFQjCNF8aWuoG8nfO5I6Dl2qWNG1T8FmkQ">http://mamaearth.in/store-loc<wbr>ator/</a>)</p>'} />,</div>
+                        <div class="solution">
+                            <strong>Solution:</strong>
+                            
+                                <ul>
+                                    <li>Replace HTTP with HTTPS</li>
+                                    <li>Implement SSL/TLS</li>
+                                    <li>Use secure communication protocols</li>
+                                </ul>
+                            
+                        </div>
+                    </div>
+                
+                    <div class="issue issue-MEDIUM">
+                        <h3>
+                            Insecure Protocol
+                            <span class="severity-tag severity-MEDIUM">MEDIUM</span>
+                        </h3>
+                        <p><strong>File:</strong> <span class="file-path">./pages/questions-2.js</span></p>
+                        <p><strong>Line:</strong> 249</p>
+                        <div class="code-block">content: <Description html={'<p>Yes, we are present offline in a few cities. You can check for your city under the&nbsp;store locator tab.&nbsp;(<a href="https://mamaearth.in/store-locator/" target="_blank" rel="noopener" data-saferedirecturl="https://www.google.com/url?hl=en&amp;q=http://mamaearth.in/store-locator/&amp;source=gmail&amp;ust=1520407581069000&amp;usg=AFQjCNF8aWuoG8nfO5I6Dl2qWNG1T8FmkQ">http://mamaearth.in/store-loc<wbr>ator/</a>)</p>'} />,</div>
+                        <div class="solution">
+                            <strong>Solution:</strong>
+                            
+                                <ul>
+                                    <li>Replace HTTP with HTTPS</li>
+                                    <li>Implement SSL/TLS</li>
+                                    <li>Use secure communication protocols</li>
+                                </ul>
+                            
+                        </div>
+                    </div>
+                
+                    <div class="issue issue-MEDIUM">
+                        <h3>
+                            Insecure Protocol
+                            <span class="severity-tag severity-MEDIUM">MEDIUM</span>
+                        </h3>
+                        <p><strong>File:</strong> <span class="file-path">./pages/questions-2.js</span></p>
+                        <p><strong>Line:</strong> 273</p>
+                        <div class="code-block">content: <Description html={'<p>The answer is a big NO. No matter which brand or essential oil it is, or how much you are using it, it is NEVER safe to use ANY essential oil NEAT (without a carrier oil or some other dilution material). All essential oils should be diluted for use, especially for babies and&nbsp;<a class="external" href="http://www.foodrenegade.com/undiluted-essential-oils-for-babies-busted-essential-oil-myth-3/" rel="nofollow">children</a>.</p><p>Our baby oils have essential oil which is diluted using base oils and butters. So, their benefits are reaped and nobody is harmed. A win-win situation for all</p>'} />,</div>
+                        <div class="solution">
+                            <strong>Solution:</strong>
+                            
+                                <ul>
+                                    <li>Replace HTTP with HTTPS</li>
+                                    <li>Implement SSL/TLS</li>
+                                    <li>Use secure communication protocols</li>
+                                </ul>
+                            
+                        </div>
+                    </div>
+                
+                    <div class="issue issue-MEDIUM">
+                        <h3>
+                            Insecure Protocol
+                            <span class="severity-tag severity-MEDIUM">MEDIUM</span>
+                        </h3>
+                        <p><strong>File:</strong> <span class="file-path">./pages/questions-2.js</span></p>
+                        <p><strong>Line:</strong> 278</p>
+                        <div class="code-block">content: <Description html={'<p>Yes, Mamaearth is the First&nbsp;<a class="external" href="http://madesafe.org/certified-products/by-brand/" rel="nofollow"><em>MADESAFE</em>&nbsp;CERTIFIED</a>&nbsp;brand in Asia. Which means, we are not just approved from an agency but from a panel of expert MD Doctors (Pediatricians, Dermatologists, Cosmetic scientists) who develop &amp; approve guidelines for baby products. So, keep your worries aside, we have the best of science and love backing us up.</p>'} />,</div>
+                        <div class="solution">
+                            <strong>Solution:</strong>
+                            
+                                <ul>
+                                    <li>Replace HTTP with HTTPS</li>
+                                    <li>Implement SSL/TLS</li>
+                                    <li>Use secure communication protocols</li>
+                                </ul>
+                            
+                        </div>
+                    </div>
+                
+                    <div class="issue issue-MEDIUM">
+                        <h3>
+                            Insecure Protocol
+                            <span class="severity-tag severity-MEDIUM">MEDIUM</span>
+                        </h3>
+                        <p><strong>File:</strong> <span class="file-path">./pages/questions-2.js</span></p>
+                        <p><strong>Line:</strong> 283</p>
+                        <div class="code-block">content: <Description html={'<p>Yes. We are a new brand, but more than simply looking at us as a brand, view&nbsp;<strong>us as parents.</strong>&nbsp;We are not a mega-brand, trying to cut corners, reduce cost or mint money. We as parents went through some disastrous days which we don’t want any other parent to go through. We are here to make sure you trust our brand, love using it, and at least have one thing less to worry about. Also, We are the only&nbsp;<em>Made safe</em>&nbsp;certified brand in Asia, where we have passed stringent standards set by&nbsp;<a class="external" href="http://madesafe.org/about/advisors/" rel="nofollow">doctors and scientists</a>. Try us once and the next time you will be answering this for us to your friends and relatives.</p>'} />,</div>
+                        <div class="solution">
+                            <strong>Solution:</strong>
+                            
+                                <ul>
+                                    <li>Replace HTTP with HTTPS</li>
+                                    <li>Implement SSL/TLS</li>
+                                    <li>Use secure communication protocols</li>
+                                </ul>
+                            
+                        </div>
+                    </div>
+                
+            </div>
+        </body>
+        </html>
+        
